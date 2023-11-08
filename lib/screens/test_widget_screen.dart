@@ -13,16 +13,16 @@ class _TestWidgetScreenState extends State<TestWidgetScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Test Widget Screen'),
+        title: const Text('Test Widget Screen'),
       ),
       body: Column(
         children: [
-          TestWidget(),
+          const TestWidget(),
           TextButton(
             onPressed: () {
               Navigator.pop(context);
             },
-            child: Text(
+            child: const Text(
               'Go To Back',
               style: TextStyle(fontSize: 26),
             ),
