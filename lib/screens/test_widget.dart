@@ -36,7 +36,7 @@ class _TestWidgetState extends State<TestWidget> {
             style: TextStyle(fontSize: 32, color: Colors.black),
           ),
           const Text(
-            "Hello, student",
+            "This is Seolly in HUFS",
             style: TextStyle(fontSize: 32, color: Colors.black),
           ),
           const Row(
@@ -44,25 +44,25 @@ class _TestWidgetState extends State<TestWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Hello, 1",
+                "I'm in Korea, Republic of",
                 style: TextStyle(fontSize: 32, color: Colors.black),
               ),
               Text(
-                "Hello, 2",
+                "+ 8 Hours GMT",
                 style: TextStyle(fontSize: 32, color: Colors.black),
               ),
               Column(
                 children: [
                   Text(
-                    "Hello, 3",
+                    "Hello, beatiful people!",
                     style: TextStyle(fontSize: 32, color: Colors.black),
                   ),
                   Text(
-                    "Hello, 4",
+                    ":D",
                     style: TextStyle(fontSize: 32, color: Colors.black),
                   ),
                   Text(
-                    "Hello, 5",
+                    "Thank You",
                     style: TextStyle(fontSize: 32, color: Colors.black),
                   ),
                 ],
