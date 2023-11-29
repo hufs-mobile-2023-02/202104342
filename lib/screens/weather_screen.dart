@@ -93,7 +93,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
     print('longitude : $longitude');
   }
 
-  void getWeather(@required String lat,@required String lon) async {
+  void getWeather(String lat,@required String lon) async {
 
     final dio = Dio();
     String apiKey = dotenv.get("WEATHER_KEY");
