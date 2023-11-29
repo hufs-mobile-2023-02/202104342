@@ -50,3 +50,29 @@ class _HomeWidgetState extends State<HomeWidget> {
     );
   }
 }
+class _HomeWidgetState extends State<HomeWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Home'),
+      ),
+      body: Center(
+        child: TextButton(
+          child: const Text(
+            'Go To Nav Test Screen',
+            style: TextStyle(fontSize: 26),
+          ),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const NavTestScreen(),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
