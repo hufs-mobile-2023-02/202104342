@@ -11,6 +11,4 @@
 void RegisterPlugins(flutter::PluginRegistry* registry) {
   GeolocatorWindowsRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("GeolocatorWindows"));
-  FirebaseCorePluginCApiRegisterWithRegistrar(
-          registry->GetRegistrarForPlugin("FirebaseCorePluginCApi"));
 }
