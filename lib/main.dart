@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_project/Screens/nav_test_screen.dart';
 import 'package:mobile_project/Screens/test_widget_screen.dart';
-import 'package:mobile_project/screens/nav_test_screen.dart';
 import 'Screens/test_widget.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
@@ -24,32 +23,6 @@ class HomeWidget extends StatefulWidget {
   State<HomeWidget> createState() => _HomeWidgetState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-      ),
-      body: Center(
-        child: TextButton(
-          child: const Text(
-            'Go To Nav Test Screen',
-            style: TextStyle(fontSize: 26),
-          ),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const NavTestScreen(),
-              ),
-            );
-          },
-        ),
-      ),
-    );
-  }
-}
 class _HomeWidgetState extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {

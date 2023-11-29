@@ -1,43 +1,29 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile_project/Screens/test_widget_screen.dart';
-import 'package:mobile_project/screens/nav_test_screen.dart';
-import 'Screens/test_widget.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:mobile_project/Screens/test_widget.dart';
 
-void main() async {
-
-  WidgetsFlutterBinding.ensureInitialized();
-  dotenv.load(fileName: ".env");
-
-  runApp(
-    const MaterialApp(
-      home: HomeWidget(),
-    ),
-  );
-}
-
-class HomeWidget extends StatefulWidget {
-  const HomeWidget({super.key});
+class TestWidgetScreen extends StatefulWidget {
+  const TestWidgetScreen({super.key});
 
   @override
-  State<HomeWidget> createState() => _HomeWidgetState();
+  State<TestWidgetScreen> createState() => _TestWidgetScreenState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
+class _TestWidgetScreenState extends State<TestWidgetScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        title: Text('Test Widget Screen'),
       ),
       body: Column(
         children: [
-          const TestWidget(),
+          TestWidget(),
           TextButton(
             onPressed: () {
               Navigator.pop(context);
             },
-            child: const Text(
+            child: Text(
               'Go To Back',
               style: TextStyle(fontSize: 26),
             ),
@@ -47,4 +33,3 @@ class _HomeWidgetState extends State<HomeWidget> {
     );
   }
 }
-
