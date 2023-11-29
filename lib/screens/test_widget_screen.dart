@@ -1,19 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_project/Screens/test_widget.dart';
+import 'package:mobile_project/Screens/test_widget_screen.dart';
+import 'package:mobile_project/screens/nav_test_screen.dart';
+import 'Screens/test_widget.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-class TestWidgetScreen extends StatefulWidget {
-  const TestWidgetScreen({super.key});
+void main() async {
 
-  @override
-  State<TestWidgetScreen> createState() => _TestWidgetScreenState();
+  WidgetsFlutterBinding.ensureInitialized();
+  dotenv.load(fileName: ".env");
+
+  runApp(
+    const MaterialApp(
+      home: HomeWidget(),
+    ),
+  );
 }
 
-class _TestWidgetScreenState extends State<TestWidgetScreen> {
+class HomeWidget extends StatefulWidget {
+  const HomeWidget({super.key});
+
+  @override
+  State<HomeWidget> createState() => _HomeWidgetState();
+}
+
+class _HomeWidgetState extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Test Widget Screen'),
+        title: const Text('Home'),
       ),
       body: Column(
         children: [
@@ -32,3 +47,4 @@ class _TestWidgetScreenState extends State<TestWidgetScreen> {
     );
   }
 }
+
