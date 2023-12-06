@@ -32,7 +32,7 @@ class _TestWidgetState extends State<TestWidget> {
       child: Column(
         children: [
           const Text(
-            "Hello, flutter",
+            "Hello, dart",
             style: TextStyle(fontSize: 32, color: Colors.black),
           ),
           const Text(
