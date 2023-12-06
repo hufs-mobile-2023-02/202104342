@@ -93,7 +93,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
     print('longitude : $longitude');
   }
 
-  void getWeather(String lat,@required String lon) async {
+  void getWeather(String lat,String lon) async {
 
     final dio = Dio();
     String apiKey = dotenv.get("WEATHER_KEY");
@@ -118,7 +118,15 @@ class _WeatherScreenState extends State<WeatherScreen> {
   }
 
   @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    print('print is called');
+  }
+
+  @override
   Widget build(BuildContext context) {
+    print('build is called');
     return Scaffold(
       appBar: AppBar(
         title: const Text('Weather Screen'),
